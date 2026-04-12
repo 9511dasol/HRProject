@@ -1,13 +1,43 @@
+import React from "react";
+import PipelineClient from "@/components/hr/pipeline/PipelineClient";
+import { Candidate } from "@/types/hr";
+
+const MOCK_PIPELINE_CANDIDATES: Candidate[] = [
+  {
+    id: "cnd_1",
+    name: "김지원",
+    appliedJob: "job_1",
+    status: "interview",
+    fitScore: 92,
+    resumeSummary: "이커머스 플랫폼 프론트엔드 성능 30% 개선 경험.",
+  },
+  {
+    id: "cnd_2",
+    name: "박랭체",
+    appliedJob: "job_2",
+    status: "screening",
+    fitScore: 85,
+    resumeSummary: "LangGraph를 활용한 사내 챗봇 토이 프로젝트 진행.",
+  },
+  {
+    id: "cnd_3",
+    name: "이코드",
+    appliedJob: "job_1",
+    status: "applied",
+    fitScore: 68,
+    resumeSummary: "신입 프론트엔드 개발자. React 기반 쇼핑몰 클론 코딩.",
+  },
+  {
+    id: "cnd_4",
+    name: "최서버",
+    appliedJob: "job_2",
+    status: "offered",
+    fitScore: 95,
+    resumeSummary:
+      "대용량 트래픽 처리 경험 보유. FastAPI 및 Redis 캐싱 아키텍처 설계.",
+  },
+];
+
 export default function PipelinePage() {
-  return (
-    <div className="h-[600px] flex flex-col items-center justify-center bg-white rounded-[48px] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] animate-in fade-in">
-      <i className="bx bx-group text-[64px] text-slate-200 mb-6"></i>
-      <h3 className="text-[28px] font-black text-slate-800 tracking-tight">
-        지원자 관리 (준비 중)
-      </h3>
-      <p className="text-slate-400 font-medium mt-3">
-        칸반 보드 형태의 ATS가 들어올 예정입니다.
-      </p>
-    </div>
-  );
+  return <PipelineClient initialCandidates={MOCK_PIPELINE_CANDIDATES} />;
 }
