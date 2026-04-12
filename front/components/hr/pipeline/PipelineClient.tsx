@@ -112,7 +112,7 @@ export default function PipelineClient({
             onClick={() => setIsAddOpen(true)}
             className="flex-1 lg:flex-none px-5 py-3.5 bg-slate-900 text-white font-bold rounded-2xl shadow-[0_8px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_25px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center justify-center gap-2 text-[14px]"
           >
-            <i className="bx bx-user-plus text-lg"></i> 수동 추가
+            <i className="bx bx-user-plus text-lg"></i> 지원자 추가
           </button>
         </div>
       </header>
