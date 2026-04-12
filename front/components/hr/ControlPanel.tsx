@@ -28,7 +28,7 @@ export default function ControlPanel({
   return (
     <div className="lg:col-span-4 space-y-8">
       {/* 1. 대상 공고 설정 카드 */}
-      <div className="bg-white p-7 lg:p-9 rounded-[32px] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500">
+      <div className="bg-white p-7 lg:p-9 rounded-4xl border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500">
         <div className="flex items-center gap-3 mb-8">
           <div className="w-9 h-9 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center font-black text-[10px] border border-blue-100">
             01
@@ -82,7 +82,7 @@ export default function ControlPanel({
       </div>
 
       {/* 2. 지원자 분석 대상 카드 */}
-      <div className="bg-white p-7 lg:p-9 rounded-[32px] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500">
+      <div className="bg-white p-7 lg:p-9 rounded-4xl border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500">
         <div className="flex items-center gap-3 mb-8">
           <div className="w-9 h-9 rounded-2xl bg-slate-50 text-slate-400 flex items-center justify-center font-black text-[10px] border border-slate-100">
             02
@@ -127,7 +127,7 @@ export default function ControlPanel({
       <button
         onClick={onGenerateAI}
         disabled={isGenerating || !selectedJob || !selectedCandidate}
-        className="group relative w-full py-5 bg-gradient-to-br from-indigo-600 to-blue-600 text-white rounded-[28px] font-black text-[16px] shadow-[0_10px_25px_rgba(79,70,229,0.3)] hover:shadow-[0_15px_35px_rgba(79,70,229,0.4)] disabled:opacity-30 disabled:shadow-none active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden"
+        className="group relative w-full py-5 bg-linear-to-br from-indigo-600 to-blue-600 text-white rounded-[28px] font-black text-[16px] shadow-[0_10px_25px_rgba(79,70,229,0.3)] hover:shadow-[0_15px_35px_rgba(79,70,229,0.4)] disabled:opacity-30 disabled:shadow-none active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden"
       >
         <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         {isGenerating ? (

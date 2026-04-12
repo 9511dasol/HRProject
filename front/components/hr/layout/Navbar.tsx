@@ -36,13 +36,13 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-xl border-b border-slate-200/60 shadow-[0_4px_30px_rgba(0,0,0,0.03)] transition-all">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+      <div className="max-w-400 mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
         <div className="flex items-center gap-12">
           <div
             className="flex items-center gap-3.5 group cursor-pointer active:scale-95 transition-transform"
             onClick={() => handleNavigate("/hr/agent")}
           >
-            <div className="w-11 h-11 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-[14px] flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:rotate-6 transition-all duration-300">
+            <div className="w-11 h-11 bg-linear-to-br from-blue-500 to-indigo-600 rounded-[14px] flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:rotate-6 transition-all duration-300">
               <i className="bx bx-brain text-white text-[24px]"></i>
             </div>
             <div className="hidden sm:block">
@@ -63,9 +63,9 @@ export default function Navbar() {
                 <button
                   key={item.id}
                   onClick={() => handleNavigate(item.path)}
-                  className={`flex items-center gap-2.5 px-5 py-2.5 rounded-[16px] text-[14px] font-bold transition-all duration-300 ${
+                  className={`flex items-center gap-2.5 px-5 py-2.5 rounded-2xl text-[14px] font-bold transition-all duration-300 ${
                     isActive
-                      ? "bg-blue-50 text-blue-600 shadow-sm ring-1 ring-blue-100/50 translate-y-[-1px]"
+                      ? "bg-blue-50 text-blue-600 shadow-sm ring-1 ring-blue-100/50 -translate-y-px"
                       : "text-slate-500 hover:bg-slate-50 hover:text-slate-900 hover:shadow-sm"
                   }`}
                 >
@@ -93,7 +93,7 @@ export default function Navbar() {
                 Senior Recruiter
               </p>
             </div>
-            <div className="w-11 h-11 rounded-[16px] bg-slate-100 flex items-center justify-center text-slate-400 border-2 border-white shadow-sm ring-1 ring-slate-200 group-hover:ring-blue-300 transition-all overflow-hidden">
+            <div className="w-11 h-11 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-400 border-2 border-white shadow-sm ring-1 ring-slate-200 group-hover:ring-blue-300 transition-all overflow-hidden">
               <i className="bx bxs-user text-[24px] mt-1"></i>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 p-6 shadow-2xl absolute w-full left-0 top-[80px] animate-in slide-in-from-top-4 duration-300">
+        <div className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 p-6 shadow-2xl absolute w-full left-0 top-20 animate-in slide-in-from-top-4 duration-300">
           <div className="flex flex-col gap-3">
             {menuItems.map((item) => {
               const isActive = pathname.startsWith(item.path);
@@ -118,7 +118,7 @@ export default function Navbar() {
                 <button
                   key={item.id}
                   onClick={() => handleNavigate(item.path)}
-                  className={`p-4 rounded-[16px] font-bold text-left flex items-center gap-4 transition-colors ${
+                  className={`p-4 rounded-2xl font-bold text-left flex items-center gap-4 transition-colors ${
                     isActive
                       ? "bg-blue-50 text-blue-600 ring-1 ring-blue-100"
                       : "text-slate-600 bg-slate-50 hover:bg-slate-100"

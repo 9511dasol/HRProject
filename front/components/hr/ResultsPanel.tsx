@@ -12,7 +12,7 @@ export default function ResultsPanel({
 }: ResultsPanelProps) {
   return (
     <div className="lg:col-span-8">
-      <div className="bg-white rounded-[40px] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-full min-h-[600px] flex flex-col overflow-hidden group">
+      <div className="bg-white rounded-[40px] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-full min-h-150 flex flex-col overflow-hidden group">
         {/* 패널 헤더 */}
         <div className="px-8 lg:px-10 py-7 border-b border-slate-100 flex justify-between bg-white items-center sticky top-0 z-10">
           <div className="flex items-center gap-4">
@@ -60,8 +60,8 @@ export default function ResultsPanel({
           {isGenerating && (
             <div className="h-full flex flex-col items-center justify-center py-24 space-y-12">
               <div className="relative">
-                <div className="w-28 h-28 border-[12px] border-indigo-50 rounded-full"></div>
-                <div className="w-28 h-28 border-[12px] border-indigo-500 rounded-full border-t-transparent animate-spin absolute top-0 left-0 shadow-[0_0_20px_rgba(99,102,241,0.4)]"></div>
+                <div className="w-28 h-28 border-12 border-indigo-50 rounded-full"></div>
+                <div className="w-28 h-28 border-12 border-indigo-500 rounded-full border-t-transparent animate-spin absolute top-0 left-0 shadow-[0_0_20px_rgba(99,102,241,0.4)]"></div>
                 <i className="bx bxs-zap text-5xl text-indigo-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse"></i>
               </div>
               <div className="text-center">
@@ -84,7 +84,7 @@ export default function ResultsPanel({
                   className="bg-white p-8 lg:p-11 rounded-[40px] border border-indigo-100/60 shadow-[0_15px_40px_-20px_rgba(0,0,0,0.08)] hover:border-indigo-300 hover:shadow-xl transition-all duration-300 group/card relative"
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="px-4 py-1.5 rounded-[12px] bg-indigo-50 text-indigo-600 text-[11px] font-black uppercase tracking-widest border border-indigo-100">
+                    <span className="px-4 py-1.5 rounded-xl bg-indigo-50 text-indigo-600 text-[11px] font-black uppercase tracking-widest border border-indigo-100">
                       {q.type}
                     </span>
                     <div className="h-px flex-1 bg-slate-100"></div>
@@ -99,7 +99,7 @@ export default function ResultsPanel({
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-slate-50/80 p-7 rounded-[28px] border border-slate-100 transition-colors">
-                      <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-4 flex items-center gap-2">
+                      <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
                         <i className="bx bx-target-lock text-lg"></i> 설계 의도
                       </span>
                       <p className="text-slate-700 text-[14px] leading-relaxed font-bold">
@@ -107,7 +107,7 @@ export default function ResultsPanel({
                       </p>
                     </div>
                     <div className="bg-indigo-50/30 border border-indigo-100/50 p-7 rounded-[28px] transition-colors group-hover/card:bg-indigo-50/50">
-                      <span className="text-[10px] font-black text-indigo-400 uppercase tracking-widest block mb-4 flex items-center gap-2">
+                      <span className="text-[10px] font-black text-indigo-400 uppercase tracking-widest mb-4 flex items-center gap-2">
                         <i className="bx bx-data text-lg"></i> RAG 분석 근거
                       </span>
                       <p className="text-[14px] leading-relaxed font-black italic underline underline-offset-8 decoration-2 text-indigo-900/70 decoration-indigo-200">
