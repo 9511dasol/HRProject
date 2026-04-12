@@ -37,10 +37,10 @@ export default function PipelineClient({
         </div>
 
         <div className="flex flex-wrap gap-3 w-full lg:w-auto">
-          <button className="flex-1 lg:flex-none px-5 py-3.5 bg-white text-slate-600 font-bold rounded-[16px] border border-slate-200 shadow-sm hover:bg-slate-50 transition-all flex items-center justify-center gap-2 text-[14px]">
+          <button className="flex-1 lg:flex-none px-5 py-3.5 bg-white text-slate-600 font-bold rounded-2xl border border-slate-200 shadow-sm hover:bg-slate-50 transition-all flex items-center justify-center gap-2 text-[14px]">
             <i className="bx bx-filter-alt text-lg"></i> 상세 필터
           </button>
-          <button className="flex-1 lg:flex-none px-5 py-3.5 bg-slate-900 text-white font-bold rounded-[16px] shadow-md hover:bg-slate-800 transition-all flex items-center justify-center gap-2 text-[14px]">
+          <button className="flex-1 lg:flex-none px-5 py-3.5 bg-slate-900 text-white font-bold rounded-2xl shadow-md hover:bg-slate-800 transition-all flex items-center justify-center gap-2 text-[14px]">
             <i className="bx bx-user-plus text-lg"></i> 지원자 추가
           </button>
         </div>

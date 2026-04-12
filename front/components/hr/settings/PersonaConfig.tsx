@@ -25,10 +25,10 @@ export default function PersonaConfig() {
   ];
 
   return (
-    <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-[32px] sm:rounded-[40px] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col h-full">
+    <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-4xl sm:rounded-[40px] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col h-full">
       <div className="mb-8">
         <h3 className="text-[20px] sm:text-[22px] font-black text-slate-900 flex items-center gap-3">
-          <div className="w-12 h-12 rounded-[16px] bg-purple-50 text-purple-600 flex items-center justify-center border border-purple-100/50 shadow-sm shrink-0">
+          <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center border border-purple-100/50 shadow-sm shrink-0">
             <i className="bx bx-mask text-[26px]"></i>
           </div>
           에이전트 페르소나 설정
@@ -42,7 +42,7 @@ export default function PersonaConfig() {
       <div className="flex-1 flex flex-col space-y-8">
         {/* 톤앤매너 선택 */}
         <div>
-          <label className="block text-[13px] font-black text-slate-700 mb-4 uppercase tracking-widest flex items-center gap-2">
+          <label className="text-[13px] font-black text-slate-700 mb-4 uppercase tracking-widest flex items-center gap-2">
             <i className="bx bx-message-rounded-dots text-lg text-purple-400"></i>{" "}
             면접관 톤앤매너
           </label>
@@ -51,14 +51,14 @@ export default function PersonaConfig() {
               <button
                 key={t.id}
                 onClick={() => setTone(t.id)}
-                className={`flex items-center gap-4 p-4 rounded-[24px] border-2 transition-all duration-300 text-left group ${
+                className={`flex items-center gap-4 p-4 rounded-3xl border-2 transition-all duration-300 text-left group ${
                   tone === t.id
                     ? "border-purple-500 bg-purple-50/50 shadow-md shadow-purple-100"
                     : "border-slate-100 hover:border-purple-200 bg-white hover:bg-purple-50/30"
                 }`}
               >
                 <div
-                  className={`w-14 h-14 rounded-[16px] flex items-center justify-center text-[28px] shrink-0 transition-all duration-300 ${tone === t.id ? "bg-purple-500 text-white shadow-lg shadow-purple-300 scale-105" : "bg-slate-100 text-slate-400 group-hover:text-purple-400"}`}
+                  className={`w-14 h-14 rounded-2xl flex items-center justify-center text-[28px] shrink-0 transition-all duration-300 ${tone === t.id ? "bg-purple-500 text-white shadow-lg shadow-purple-300 scale-105" : "bg-slate-100 text-slate-400 group-hover:text-purple-400"}`}
                 >
                   <i className={`bx ${t.icon}`}></i>
                 </div>
@@ -81,12 +81,12 @@ export default function PersonaConfig() {
 
         {/* 커스텀 프롬프트 */}
         <div className="pt-8 border-t border-slate-100 flex-1 flex flex-col">
-          <label className="block text-[13px] font-black text-slate-700 mb-4 uppercase tracking-widest flex items-center gap-2">
+          <label className="text-[13px] font-black text-slate-700 mb-4 uppercase tracking-widest flex items-center gap-2">
             <i className="bx bx-code-block text-lg text-purple-400"></i> 시스템
             프롬프트 (Custom)
           </label>
           <textarea
-            className="w-full flex-1 p-5 bg-slate-50 border border-slate-200 rounded-[24px] text-[14px] font-medium text-slate-700 focus:ring-4 focus:ring-purple-100 focus:border-purple-500 outline-none resize-none min-h-[150px] leading-relaxed shadow-inner"
+            className="w-full flex-1 p-5 bg-slate-50 border border-slate-200 rounded-3xl text-[14px] font-medium text-slate-700 focus:ring-4 focus:ring-purple-100 focus:border-purple-500 outline-none resize-none min-h-37.5 leading-relaxed shadow-inner"
             placeholder="예: 우리 회사는 '주도성'을 가장 중요하게 생각합니다. 질문 생성 시 주도성을 검증할 수 있는 문항을 반드시 포함하세요."
             defaultValue="우리 회사는 '주도성'과 '데이터 기반 의사결정'을 가장 중요하게 생각합니다. 답변의 진위를 파악할 수 있도록 수치화된 결과를 요구하는 꼬리 질문을 최우선으로 생성하세요."
           ></textarea>
